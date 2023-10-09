@@ -18,7 +18,7 @@ body {
     align-items: center;
     font-family: "Creepster", sans-serif;
     font-size: 4rem;
-    color: white;
+    color: #ffffff;
     text-align: center;
 }
 
@@ -61,7 +61,6 @@ body {
         margin: 0 auto;
         height: auto;
         font-size: 3rem;
-
     }
 
     #card-grid {
