@@ -1,0 +1,107 @@
+html {
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.header {
+  width: 100%;
+  height: 20rem;
+  background-image: url("assets/header-bg.avif");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Creepster", sans-serif;
+  font-size: 5rem;
+  color: white;
+}
+
+main {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  height: calc(100vh - 20rem);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.introButton {
+  background-color: #83060e;
+  font-family: "Creepster", sans-serif;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  width: 235px;
+  border: 2px solid;
+  border-radius: 5px;
+}
+
+.instruction-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(255, 0, 0, 0.799); */
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.instruction-modal.active {
+  display: flex;
+}
+
+.modal {
+  width: 50%;
+  height: 80%;
+  background-image: url("assets/blood-bg2.avif");
+  background-color: red;
+  color: white;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+  border-radius: 10px;
+  position: relative;
+}
+
+.close-modal {
+  margin: 0 auto;
+  margin-top: 2rem;
+  background-color: #83060e;
+  font-family: "Creepster", sans-serif;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  width: 235px;
+  border: 2px solid;
+  border-radius: 5px;
+}
+
+.modal > h1 {
+  text-align: center;
+  font-family: "Creepster", sans-serif;
+  font-size: 4rem;
+}
+
+.modal > p {
+  font-family: "Metal Mania", sans-serif;
+  letter-spacing: 3px;
+  font-size: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.modal > ul {
+  font-size: 1.5rem;
+  font-family: "Metal Mania", sans-serif;
+  letter-spacing: 3px;
+}
