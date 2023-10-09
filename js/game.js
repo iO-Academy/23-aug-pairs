@@ -65,7 +65,6 @@ const cardArray = [
         image: "assets/svgs/broom-solid.svg",
         pictureid: 4,
     },
-
     {
         id: 11,
         name: "hat",
@@ -73,6 +72,7 @@ const cardArray = [
         pictureid: 5,
     },
 ];
+
 const shuffle = (cards) => {
     return cards.sort(() => Math.random() - 0.5);
 };
