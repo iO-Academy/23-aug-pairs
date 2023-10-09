@@ -47,6 +47,7 @@ main {
   width: 235px;
   border: 2px solid;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 a {
