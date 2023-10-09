@@ -52,7 +52,8 @@ body {
     background-repeat: no-repeat;
     width: 20vw;
     height: 20vw;
-    padding: 0.25rem;
+    padding: 0.5rem;
+    border: solid 5px #b02929;
 }
 
 @media screen and (max-width: 490px) {
