@@ -81,6 +81,9 @@ const shuffledCardArray = shuffle(cardArray);
 
 const cardGrid = document.querySelector("#card-grid");
 
+let clickCounter = 1;
+let firstClick;
+
 shuffledCardArray.map((card) => {
     const newCard = document.createElement("div");
     newCard.classList.add("card");
@@ -88,5 +91,19 @@ shuffledCardArray.map((card) => {
     cardGrid.appendChild(newCard);
     newCard.addEventListener('click', () => {
         newCard.style.backgroundImage = `url(${card.image})`;
+        if (clickCounter % 2 === 0 && clickCounter !== 0) {
+            if (card.id !== firstClick) {
+                clickCounter++;
+                console.log('different card')
+            }
+            // console.log('second click');
+            // console.log(card.id);
+        } else {
+            firstClick = card.id;
+            console.log(firstClick);
+            clickCounter++;
+            console.log('first click');
+        }
     })
 });
+
