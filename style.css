@@ -83,11 +83,18 @@ a {
   color: #ffffff;
   background-position: center;
   background-size: cover;
-  display: flex;
+  display: none;
   flex-direction: column;
   padding: 4rem;
   border-radius: 10px;
-  position: relative;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal.active {
+  display: flex;
 }
 
 .close-modal {
@@ -100,6 +107,7 @@ a {
   width: 235px;
   border: 2px solid;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .modal > h1 {
@@ -120,4 +128,13 @@ a {
   font-size: 1.5rem;
   font-family: "Metal Mania", sans-serif;
   letter-spacing: 3px;
+}
+
+@media only screen and (max-width: 600px) {
+  .modal {
+    left: 0;
+    top: 0;
+    padding: 0.5rem;
+    transform: unset;
+  }
 }
