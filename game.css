@@ -1,5 +1,11 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: black;
+    background-color: #000000;
 }
 
 .header {
@@ -37,13 +43,12 @@ body {
     margin: 1rem auto;
     row-gap: 1rem;
     max-height: 100vh;
-
 }
 
 .card {
     background-image: url(./assets/svgs/cat-solid.svg);
     background-position: center;
-    background-color: #B02929;
+    background-color: #b02929;
     background-repeat: no-repeat;
     width: 20vw;
     height: 20vw;

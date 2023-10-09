@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
 }
@@ -33,7 +39,7 @@ main {
   gap: 2rem;
 }
 
-.introButton {
+.intro-button {
   background-color: #83060e;
   font-family: "Creepster", sans-serif;
   font-size: 2rem;
