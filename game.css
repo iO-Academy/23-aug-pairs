@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+}
+
+.header {
+    width: 100%;
+    height: 10rem;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Creepster", sans-serif;
+    font-size: 4rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+#navigation-bar {
+    background-image: url("assets/header-bg.avif");
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: 1fr 70% 1fr;
+}
+
+#timer, #turns {
+    background-color: #83060e;
+}
+
+#card-grid {
+    display: grid;
+    width: 80%;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    margin: 1rem auto;
+    row-gap: 1rem;
+    max-height: 100vh;
+}
+
+.card {
+    background-image: url(./assets/svgs/cat-solid.svg);
+    background-position: center;
+    background-color: #b02929;
+    background-repeat: no-repeat;
+    width: 20vw;
+    height: 20vw;
+    padding: 0.25rem;
+}
+
+@media screen and (max-width: 490px) {
+    .header {
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+        font-size: 3rem;
+    }
+
+    #card-grid {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .card {
+        width: 10rem;
+        height: 10rem;
+    }
+}
