@@ -1,2 +1,3 @@
-# year-cohort-projectName (eg: 22-jul-projectName)
-project template repo
+# 23-aug-pairs
+
+A JavaScript game.
