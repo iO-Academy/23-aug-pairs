@@ -87,23 +87,35 @@ let firstClick;
 shuffledCardArray.map((card) => {
     const newCard = document.createElement("div");
     newCard.classList.add("card");
-    newCard.dataset.url = card.image;
     cardGrid.appendChild(newCard);
-    newCard.addEventListener('click', () => {
+    newCard.addEventListener("click", () => {
         newCard.style.backgroundImage = `url(${card.image})`;
+        newCard.classList.add("flipped");
         if (clickCounter % 2 === 0 && clickCounter !== 0) {
-            if (card.id !== firstClick) {
+            if (card.id !== firstClick.id && card.pictureid !== firstClick.pictureid) {
                 clickCounter++;
-                console.log('different card')
+                const overlay = document.querySelector(".overlay");
+                overlay.style.display = "block";
+                setTimeout(() => {
+                    newCard.style.backgroundImage = "url('./assets/svgs/cat-solid.svg')";
+                    const flippedCards = document.querySelectorAll(".flipped");
+                    flippedCards.forEach((flippedCard) => {
+                        flippedCard.style.backgroundImage = "url('./assets/svgs/cat-solid.svg')";
+                        flippedCard.classList.remove("flipped");
+                        overlay.style.display = "none";
+                    });
+                }, 1000);
+            } else if (card.id !== firstClick.id) {
+                const flippedCards = document.querySelectorAll(".flipped");
+                flippedCards.forEach((flippedCard) => {
+                    flippedCard.classList.remove("flipped");
+                    flippedCard.classList.add("matched");
+                });
+                clickCounter++;
             }
-            // console.log('second click');
-            // console.log(card.id);
         } else {
-            firstClick = card.id;
-            console.log(firstClick);
+            firstClick = card;
             clickCounter++;
-            console.log('first click');
         }
-    })
+    });
 });
-

@@ -43,6 +43,7 @@ body {
     margin: 1rem auto;
     row-gap: 1rem;
     max-height: 100vh;
+    position: relative;
 }
 
 .card {
@@ -54,6 +55,19 @@ body {
     height: 20vw;
     padding: 0.5rem;
     border: solid 5px #b02929;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.matched {
+    border: solid 5px #ffffff;
 }
 
 @media screen and (max-width: 490px) {
