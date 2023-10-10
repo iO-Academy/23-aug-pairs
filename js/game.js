@@ -94,6 +94,7 @@ const overlay = document.querySelector(".overlay");
 const cardGrid = document.querySelector("#card-grid");
 let clickCounter = 1;
 let firstClick;
+
 const flipCards = () => {
     const flippedCards = document.querySelectorAll(".flipped");
     flippedCards.forEach((flippedCard) => {
@@ -102,6 +103,7 @@ const flipCards = () => {
         overlay.style.display = "none";
     });
 };
+
 const addClickEvents = (card, cardInfo) => {
     card.addEventListener("click", () => {
         card.style.backgroundImage = `url(${cardInfo.image})`;
@@ -132,6 +134,7 @@ const addClickEvents = (card, cardInfo) => {
         }
     });
 };
+
 shuffledCardArray.map((cardInfo) => {
     const newCard = document.createElement("div");
     newCard.classList.add("card");
