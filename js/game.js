@@ -94,6 +94,8 @@ const overlay = document.querySelector(".overlay");
 const cardGrid = document.querySelector("#card-grid");
 let clickCounter = 1;
 let firstClick;
+let turnCounter = 0
+let turnDisplay = document.querySelector("#turns-p");
 
 const flipCards = () => {
     const flippedCards = document.querySelectorAll(".flipped");
@@ -130,6 +132,8 @@ const addClickEvents = (card, cardInfo) => {
         } else if (card.classList.contains("matched") === false) {
             card.classList.add("flipped");
             firstClick = cardInfo;
+            turnCounter++;
+            turnDisplay.innerText = "Turn: " + turnCounter;
             clickCounter++;
         }
     });

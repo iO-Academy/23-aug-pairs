@@ -31,7 +31,14 @@ body {
 }
 
 #timer, #turns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #83060e;
+    color: #ffffff;
+    font-size: 2rem;
+    font-family: "Creepster", sans-serif;
+    text-shadow: 4px 4px #000000;
 }
 
 #card-grid {
@@ -49,7 +56,7 @@ body {
 .card {
     background-image: url(./assets/svgs/cat-solid.svg);
     background-position: center;
-    background-color: #b02929;
+    background-color: #ffffff;
     background-repeat: no-repeat;
     width: 20vw;
     height: 20vw;
