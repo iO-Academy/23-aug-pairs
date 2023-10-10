@@ -96,11 +96,13 @@ let clickCounter = 1;
 let firstClick;
 let turnCounter = 0
 let turnDisplay = document.querySelector("#turns-p");
-
+let matchCounter = 0;
+let totalTurns = document.querySelector("#total-turns");
 const flipCards = () => {
     const flippedCards = document.querySelectorAll(".flipped");
     flippedCards.forEach((flippedCard) => {
-        flippedCard.style.backgroundImage = "url('./assets/svgs/cat-solid.svg')";
+        flippedCard.style.backgroundImage = "url('./assets/svgs/grim-reaper.svg')";
+        flippedCard.style.backgroundColor = "#000000";
         flippedCard.classList.remove("flipped");
         overlay.style.display = "none";
     });
@@ -109,6 +111,7 @@ const flipCards = () => {
 const addClickEvents = (card, cardInfo) => {
     card.addEventListener("click", () => {
         card.style.backgroundImage = `url(${cardInfo.image})`;
+        card.style.backgroundColor = "#83060e";
         if (
             clickCounter % 2 === 0 &&
             card.classList.contains("matched") === false
@@ -128,6 +131,10 @@ const addClickEvents = (card, cardInfo) => {
                     flippedCard.classList.add("matched");
                 });
                 clickCounter++;
+                matchCounter += 2;
+                if (matchCounter === cardArray.length) {
+                    displayEndGame();
+                }
             }
         } else if (card.classList.contains("matched") === false) {
             card.classList.add("flipped");
@@ -145,3 +152,11 @@ shuffledCardArray.map((cardInfo) => {
     cardGrid.appendChild(newCard);
     addClickEvents(newCard, cardInfo);
 });
+
+const displayEndGame = () => {
+    const endModal = document.querySelector(".end-modal");
+    const modal = document.querySelector(".modal");
+    endModal.classList.toggle("active");
+    modal.classList.toggle("active");
+    totalTurns.innerText = "You took " + turnCounter + " turns to win.";
+}
