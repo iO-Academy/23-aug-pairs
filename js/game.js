@@ -84,9 +84,11 @@ const cardArray = [
         matched: false,
     },
 ];
+
 const shuffle = (cards) => {
     return cards.sort(() => Math.random() - 0.5);
 };
+
 const shuffledCardArray = shuffle(cardArray);
 const overlay = document.querySelector(".overlay");
 const cardGrid = document.querySelector("#card-grid");
