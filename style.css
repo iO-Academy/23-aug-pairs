@@ -12,6 +12,7 @@ body {
     padding: 0;
     margin: 0;
     height: 100%;
+    cursor: url('assets/witch-small.png'), auto;
 }
 
 .header {
@@ -48,7 +49,7 @@ main {
     width: 235px;
     border: 2px solid;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: url('assets/scull.png'), auto;
 }
 
 a {
@@ -62,7 +63,7 @@ a {
     border: 2px solid;
     border-radius: 5px;
     text-decoration: none;
-    cursor: pointer;
+    cursor: url('assets/scull.png'), auto;
 }
 
 .instruction-modal {
@@ -111,7 +112,7 @@ a {
     width: 235px;
     border: 2px solid;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: url('assets/scull.png'), auto;
 }
 
 .modal > h1 {
