@@ -98,7 +98,7 @@ let time = 0;
 const timer = setInterval(() => {
     time++;
     const timer = document.querySelector("#timer");
-    timer.innerText = `Time ${convertSeconds(time)}`;
+    timer.innerHTML = `Time<br> ${convertSeconds(time)}`;
 }, 1000);
 
 const shuffle = (cards) => {
@@ -149,7 +149,8 @@ const addClickEvents = (card, cardInfo) => {
                 clickCounter++;
                 matchCounter += 2;
                 if (matchCounter === cardArray.length) {
-                    displayEndGame();
+                    clearInterval(timer);
+                    setTimeout(displayEndGame, 1000);
                 }
             }
         } else if (card.classList.contains("matched") === false) {
@@ -170,7 +171,6 @@ shuffledCardArray.map((cardInfo) => {
 });
 
 const displayEndGame = () => {
-    clearInterval(timer);
     const endModal = document.querySelector(".end-modal");
     const modal = document.querySelector(".modal");
     const totalTime = document.querySelector("#total-time");

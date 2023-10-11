@@ -156,6 +156,10 @@ a {
         font-size: 3rem;
     }
 
+    #timer, #turns {
+        font-size: 1.5rem;
+    }
+
     #card-grid {
         width: 100%;
     }
