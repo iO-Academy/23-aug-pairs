@@ -124,8 +124,12 @@ const flipCards = () => {
     });
 };
 
+let creakyDoor = new Audio('assets/s7t2-sounds/knife-being-sharpened-99632.mp3');
+creakyDoor.volume = 0.3;
+
 const addClickEvents = (card, cardInfo) => {
     card.addEventListener("click", () => {
+        creakyDoor.play();
         card.style.backgroundImage = `url(${cardInfo.image})`;
         card.style.backgroundColor = "#83060e";
         if (
