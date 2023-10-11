@@ -124,11 +124,13 @@ const flipCards = () => {
     });
 };
 
-let creakyDoor = new Audio('./assets/audio-s7t2/590948__rudmer_rotteveel__creaky-door-fast-02.mp3');
-creakyDoor.play();
+let creakyDoor = new Audio('assets/s7t2-sounds/590948__rudmer_rotteveel__creaky-door-fast-02.mp3');
+
+
 
 const addClickEvents = (card, cardInfo) => {
     card.addEventListener("click", () => {
+        creakyDoor.play();
         card.style.backgroundImage = `url(${cardInfo.image})`;
         card.style.backgroundColor = "#83060e";
         if (
