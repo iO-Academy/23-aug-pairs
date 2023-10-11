@@ -124,6 +124,9 @@ const flipCards = () => {
     });
 };
 
+let creakyDoor = new Audio('./assets/audio-s7t2/590948__rudmer_rotteveel__creaky-door-fast-02.mp3');
+creakyDoor.play();
+
 const addClickEvents = (card, cardInfo) => {
     card.addEventListener("click", () => {
         card.style.backgroundImage = `url(${cardInfo.image})`;
