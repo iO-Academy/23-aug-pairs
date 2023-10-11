@@ -84,6 +84,21 @@ const cardArray = [
         matched: false,
     },
 ];
+const convertSeconds = (time) => {
+    const minutes = Math.floor(time / 60);
+    const seconds = time % 60;
+
+    return `${minutes.toString().padStart(2, "0")}:${seconds
+        .toString()
+        .padStart(2, "0")}`;
+};
+
+let time = 0;
+const timer = setInterval(() => {
+    time++;
+    const timer = document.querySelector("#timer");
+    timer.innerText = `Time ${convertSeconds(time)}`;
+}, 1000);
 
 const shuffle = (cards) => {
     return cards.sort(() => Math.random() - 0.5);
@@ -154,9 +169,14 @@ shuffledCardArray.map((cardInfo) => {
 });
 
 const displayEndGame = () => {
+
+    clearInterval(timer);
     const endModal = document.querySelector(".end-modal");
     const modal = document.querySelector(".modal");
+    const totalTime = document.querySelector("#total-time");
     endModal.classList.toggle("active");
     modal.classList.toggle("active");
     totalTurns.innerText = "You took " + turnCounter + " turns to win.";
+    totalTime.innerText = `It took you ${convertSeconds(time)}. SLOOOW!`;
+    
 }

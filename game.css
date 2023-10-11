@@ -143,8 +143,8 @@ a {
     cursor: pointer;
 }
 
-#total-turns {
-    font-size: 3rem;
+#total-turns, #total-time {
+    font-size: 2rem;
 }
 
 @media screen and (max-width: 490px) {
