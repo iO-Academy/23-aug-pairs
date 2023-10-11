@@ -32,8 +32,10 @@ body {
 
 #timer, #turns {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     background-color: #83060e;
     color: #ffffff;
     font-size: 2rem;
