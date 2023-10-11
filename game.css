@@ -32,11 +32,10 @@ body {
 
 #timer, #turns {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     background-color: #83060e;
+    text-align: center;
     color: #ffffff;
     font-size: 2rem;
     font-family: "Creepster", sans-serif;

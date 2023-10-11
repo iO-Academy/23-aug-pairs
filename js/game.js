@@ -140,7 +140,7 @@ const addClickEvents = (card, cardInfo) => {
             card.classList.add("flipped");
             firstClick = cardInfo;
             turnCounter++;
-            turnDisplay.innerText = turnCounter;
+            turnDisplay.innerHTML = `Turn <br> ${turnCounter}`;
             clickCounter++;
         }
     });
