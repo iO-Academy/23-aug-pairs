@@ -133,11 +133,11 @@ const cardArray = [
     });
   };
   
-  let knife = new Audio('assets/s7t2-sounds/knife-being-sharpened-99632.mp3');
+  let knife = new Audio('assets/sounds/knife-being-sharpened-99632.mp3');
   knife.volume = 0.3;
-  let boneCrack = new Audio ('assets/s7t2-sounds/bone-crack-121580.mp3');
+  let boneCrack = new Audio ('assets/sounds/bone-crack-121580.mp3');
   boneCrack.volume = 0.3;
-  let scaryLaugh = new Audio ('assets/s7t2-sounds/scary-laugh-123862 (1).mp3');
+  let scaryLaugh = new Audio ('assets/sounds/scary-laugh-123862 (1).mp3');
   
   const addClickEvents = (card, cardInfo) => {
     card.addEventListener("click", () => {
