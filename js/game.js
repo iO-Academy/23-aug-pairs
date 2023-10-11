@@ -84,6 +84,7 @@ const cardArray = [
         matched: false,
     },
 ];
+
 const convertSeconds = (time) => {
     const minutes = Math.floor(time / 60);
     const seconds = time % 60;
@@ -155,7 +156,7 @@ const addClickEvents = (card, cardInfo) => {
             card.classList.add("flipped");
             firstClick = cardInfo;
             turnCounter++;
-            turnDisplay.innerText = "Turn: " + turnCounter;
+            turnDisplay.innerHTML = `Turn <br> ${turnCounter}`;
             clickCounter++;
         }
     });
@@ -169,7 +170,6 @@ shuffledCardArray.map((cardInfo) => {
 });
 
 const displayEndGame = () => {
-
     clearInterval(timer);
     const endModal = document.querySelector(".end-modal");
     const modal = document.querySelector(".modal");
@@ -178,5 +178,4 @@ const displayEndGame = () => {
     modal.classList.toggle("active");
     totalTurns.innerText = "You took " + turnCounter + " turns to win.";
     totalTime.innerText = `It took you ${convertSeconds(time)}. SLOOOW!`;
-    
 }
