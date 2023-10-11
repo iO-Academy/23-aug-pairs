@@ -65,6 +65,16 @@ body {
     border: solid 5px #b02929;
 }
 
+.card-flip-step1 {
+    transform: scaleX(0.1);
+    transition: 100ms ease-in-out;
+  }
+  
+  .card-flip-step2 {
+    transform: scaleX(1);
+    transition: 100ms ease-in-out;
+  }
+
 .overlay {
     position: absolute;
     left: 0;
