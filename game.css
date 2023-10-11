@@ -35,6 +35,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #83060e;
+    text-align: center;
     color: #ffffff;
     font-size: 2rem;
     font-family: "Creepster", sans-serif;
@@ -143,8 +144,8 @@ a {
     cursor: pointer;
 }
 
-#total-turns {
-    font-size: 3rem;
+#total-turns, #total-time {
+    font-size: 2rem;
 }
 
 @media screen and (max-width: 490px) {
@@ -153,6 +154,10 @@ a {
         margin: 0 auto;
         height: auto;
         font-size: 3rem;
+    }
+
+    #timer, #turns {
+        font-size: 1.5rem;
     }
 
     #card-grid {
