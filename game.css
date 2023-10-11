@@ -63,6 +63,7 @@ body {
     height: 20vw;
     padding: 0.5rem;
     border: solid 5px #b02929;
+    cursor: url('hatchet.png'), auto;
 }
 
 .overlay {
@@ -127,7 +128,8 @@ body {
     width: 235px;
     border: 2px solid;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: url('witch-small.png'), auto;
+
 }
 
 a {
@@ -141,7 +143,7 @@ a {
     border: 2px solid;
     border-radius: 5px;
     text-decoration: none;
-    cursor: pointer;
+    cursor: url('witch-small.png'), auto;
 }
 
 #total-turns, #total-time {

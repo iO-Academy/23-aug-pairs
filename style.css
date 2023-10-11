@@ -48,7 +48,7 @@ main {
     width: 235px;
     border: 2px solid;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: url('witch-small.png'), auto;
 }
 
 a {
@@ -62,7 +62,7 @@ a {
     border: 2px solid;
     border-radius: 5px;
     text-decoration: none;
-    cursor: pointer;
+    cursor: url('witch-small.png'), auto;
 }
 
 .instruction-modal {
@@ -111,7 +111,7 @@ a {
     width: 235px;
     border: 2px solid;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: url('witch-small.png'), auto;
 }
 
 .modal > h1 {
