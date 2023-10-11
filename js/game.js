@@ -133,12 +133,15 @@ const cardArray = [
     });
   };
   
-  let creakyDoor = new Audio('assets/s7t2-sounds/knife-being-sharpened-99632.mp3');
-  creakyDoor.volume = 0.3;
+  let knife = new Audio('assets/s7t2-sounds/knife-being-sharpened-99632.mp3');
+  knife.volume = 0.3;
+  let boneCrack = new Audio ('assets/s7t2-sounds/bone-crack-121580.mp3');
+  boneCrack.volume = 0.3;
+  let scaryLaugh = new Audio ('assets/s7t2-sounds/scary-laugh-123862 (1).mp3');
   
   const addClickEvents = (card, cardInfo) => {
     card.addEventListener("click", () => {
-      creakyDoor.play();
+      knife.play();
       card.classList.add("card-flip-step1");
       card.addEventListener("transitionend", () => {
         card.style.backgroundImage = `url(${cardInfo.image})`;
@@ -167,6 +170,7 @@ const cardArray = [
           });
           clickCounter++;
           matchCounter += 2;
+          boneCrack.play();
           if (matchCounter === cardArray.length) {
             clearInterval(timer);
             setTimeout(displayEndGame, 1000);
@@ -197,4 +201,5 @@ const cardArray = [
     modal.classList.toggle("active");
     totalTurns.innerText = "You took " + turnCounter + " turns to win.";
     totalTime.innerText = `It took you ${convertSeconds(time)}. SLOOOW!`;
+    scaryLaugh.play();
   };
