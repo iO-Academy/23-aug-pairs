@@ -124,9 +124,8 @@ const flipCards = () => {
     });
 };
 
-let creakyDoor = new Audio('assets/s7t2-sounds/590948__rudmer_rotteveel__creaky-door-fast-02.mp3');
-
-
+let creakyDoor = new Audio('assets/s7t2-sounds/knife-being-sharpened-99632.mp3');
+creakyDoor.volume = 0.3;
 
 const addClickEvents = (card, cardInfo) => {
     card.addEventListener("click", () => {
