@@ -50,7 +50,7 @@ body {
     align-items: center;
     margin: 1rem auto;
     row-gap: 1rem;
-    max-height: 100vh;
+    height: 100%;
     position: relative;
 }
 
@@ -80,6 +80,8 @@ body {
     position: absolute;
     left: 0;
     top: 0;
+    bottom: 0;
+    right: 0;
     width: 100%;
     height: 100%;
     display: none;

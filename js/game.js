@@ -95,11 +95,21 @@ const convertSeconds = (time) => {
 };
 
 let time = 0;
-const timer = setInterval(() => {
-    time++;
-    const timer = document.querySelector("#timer");
-    timer.innerHTML = `Time<br> ${convertSeconds(time)}`;
-}, 1000);
+let timerRunning = false;
+let timer;
+const toggleTimer = (running) => {
+    if (running) {
+        timerRunning = true;
+        timer = setInterval(() => {
+            time++;
+            const timer = document.querySelector("#timer");
+            timer.innerHTML = `Time<br> ${convertSeconds(time)}`;
+        }, 1000);
+    }
+    if (!running) {
+        clearInterval(timer);
+    }
+}
 
 const shuffle = (cards) => {
     return cards.sort(() => Math.random() - 0.5);
@@ -114,6 +124,18 @@ let turnCounter = 0;
 let turnDisplay = document.querySelector("#turns-p");
 let matchCounter = 0;
 let totalTurns = document.querySelector("#total-turns");
+const soundButton = document.querySelector("#sound-button");
+let musicPlaying = false
+let music = new Audio("assets/sounds/psycho.mp3");
+music.volume = 0.6;
+soundButton.addEventListener("click", () => {
+    if (musicPlaying) {
+        music.pause();
+    } else {
+        music.play();
+    }
+    musicPlaying = !musicPlaying;
+});
 
 const flipCards = () => {
     const flippedCards = document.querySelectorAll(".flipped");
@@ -123,7 +145,6 @@ const flipCards = () => {
             flippedCard.style.backgroundImage =
                 "url('./assets/svgs/grim-reaper.svg')";
             flippedCard.style.backgroundColor = "#000000";
-
             flippedCard.classList.remove("card-flip-step2");
             flippedCard.classList.remove("card-flip-step1");
         });
@@ -141,7 +162,8 @@ let scaryLaugh = new Audio('assets/sounds/scary-laugh-123862 (1).mp3');
 
 const addClickEvents = (card, cardInfo) => {
     card.addEventListener("click", () => {
-        knife.play();
+        timerRunning ? null : toggleTimer(true);
+        musicPlaying ? knife.play() : null;
         card.classList.add("card-flip-step1");
         card.addEventListener("transitionend", () => {
             card.style.backgroundImage = `url(${cardInfo.image})`;
@@ -170,9 +192,9 @@ const addClickEvents = (card, cardInfo) => {
                 });
                 clickCounter++;
                 matchCounter += 2;
-                boneCrack.play();
+                musicPlaying ? boneCrack.play() : null;
                 if (matchCounter === cardArray.length) {
-                    clearInterval(timer);
+                    toggleTimer(false);
                     setTimeout(displayEndGame, 1000);
                 }
             }
@@ -201,5 +223,5 @@ const displayEndGame = () => {
     modal.classList.toggle("active");
     totalTurns.innerText = "You took " + turnCounter + " turns to win.";
     totalTime.innerText = `It took you ${convertSeconds(time)}. SLOOOW!`;
-    scaryLaugh.play();
+    musicPlaying ? scaryLaugh.play() : null;
 };
