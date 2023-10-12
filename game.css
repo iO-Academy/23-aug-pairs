@@ -6,7 +6,7 @@
 
 body {
     background-color: #000000;
-    cursor: url('assets/witch-small.png')27.5 27.5, auto;
+    cursor: url('assets/witch-small.png') 27.5 27.5, auto;
 }
 
 .home-link {
@@ -16,6 +16,7 @@ body {
     color: #ffffff;
     text-align: center;
     text-decoration: none;
+    cursor: url('assets/ghost.png') 24 24, auto;
 }
 
 .header {
