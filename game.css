@@ -6,6 +6,7 @@
 
 body {
     background-color: #000000;
+    cursor: url('assets/witch-small.png')27.5 27.5, auto;
 }
 
 .header {
@@ -63,7 +64,7 @@ body {
     height: 20vw;
     padding: 0.5rem;
     border: solid 5px #b02929;
-    cursor: url('assets/hatchet.png'), auto;
+    cursor: url('assets/hatchet.png') 17.5 17.5, auto;
 }
 
 .card-flip-step1 {
@@ -138,7 +139,7 @@ body {
     width: 235px;
     border: 2px solid;
     border-radius: 5px;
-    cursor: url('assets/scull.png'), auto;
+    cursor: url('assets/scull.png') 17.5 17.5, auto;
 }
 
 a {
@@ -152,7 +153,7 @@ a {
     border: 2px solid;
     border-radius: 5px;
     text-decoration: none;
-    cursor: url('assets/scull.png'), auto;
+    cursor: url('assets/scull.png') 17.5 17.5, auto;
 }
 
 #total-turns, #total-time {
