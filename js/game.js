@@ -130,6 +130,7 @@ const soundButton = document.querySelector("#sound-button");
 let musicPlaying = false;
 let music = new Audio("assets/sounds/psycho.mp3");
 music.volume = 0.6;
+
 soundButton.addEventListener("click", () => {
   if (musicPlaying) {
     music.pause();
