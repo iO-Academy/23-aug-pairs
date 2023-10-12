@@ -12,6 +12,7 @@ body {
     padding: 0;
     margin: 0;
     height: 100%;
+    cursor: url('assets/witch-small.png')27.5 27.5, auto;
 }
 
 .header {
@@ -42,18 +43,21 @@ main {
 
 .intro-button {
     background-color: #83060e;
+    color: #ffffff;
+    text-shadow: 4px 4px #000000;
     font-family: "Creepster", sans-serif;
     font-size: 2rem;
     padding: 1rem 2rem;
     width: 235px;
     border: 2px solid;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: url('assets/scull.png'), auto;
 }
 
 a {
     background-color: #83060e;
-    color: #000000;
+    color: #ffffff;
+    text-shadow: 4px 4px #000000;
     text-align: center;
     font-family: "Creepster", sans-serif;
     font-size: 2rem;
@@ -62,7 +66,7 @@ a {
     border: 2px solid;
     border-radius: 5px;
     text-decoration: none;
-    cursor: pointer;
+    cursor: url('assets/scull.png') 17.5 17.5, auto;
 }
 
 .instruction-modal {
@@ -105,13 +109,15 @@ a {
     margin: 0 auto;
     margin-top: 2rem;
     background-color: #83060e;
+    text-shadow: 4px 4px #000000;
+    color: #ffffff;
     font-family: "Creepster", sans-serif;
     font-size: 2rem;
     padding: 1rem 2rem;
     width: 235px;
     border: 2px solid;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: url('assets/scull.png') 17.5 17.5, auto;
 }
 
 .modal > h1 {
