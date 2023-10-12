@@ -73,7 +73,6 @@ body {
     cursor: url('assets/scull.png'), auto;
 }
 
-
 #card-grid {
     display: grid;
     width: 80%;
@@ -203,6 +202,7 @@ a {
         height: auto;
         font-size: 3rem;
     }
+    
     .home-link {
         font-size: 2rem;
     }
