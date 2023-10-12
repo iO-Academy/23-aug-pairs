@@ -131,8 +131,11 @@ music.volume = 0.6;
 soundButton.addEventListener("click", () => {
     if (musicPlaying) {
         music.pause();
+        soundButton.innerHTML = "Play Sounds <i class='fa-solid fa-volume-high'></i>";
     } else {
         music.play();
+        soundButton.innerHTML = "Mute Sounds <i class='fa-solid fa-volume-xmark'></i>";
+
     }
     musicPlaying = !musicPlaying;
 });
@@ -222,6 +225,6 @@ const displayEndGame = () => {
     endModal.classList.toggle("active");
     modal.classList.toggle("active");
     totalTurns.innerText = "You took " + turnCounter + " turns to win.";
-    totalTime.innerText = `It took you ${convertSeconds(time)}. SLOOOW!`;
+    totalTime.innerText = `It took you ${convertSeconds(time)}... SLOOOW!`;
     musicPlaying ? scaryLaugh.play() : null;
 };
