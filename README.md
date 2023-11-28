@@ -1,3 +1,3 @@
 # 23-aug-pairs
 
-A JavaScript game.
+A spooky matching pairs game made with JavaScript.
